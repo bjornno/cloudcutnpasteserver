@@ -1,8 +1,9 @@
 require 'sinatra'
-post '/:buffer' do
-	$buf = params[:buffer]
+$pastas = {}
+post '/:key/:buffer' do
+	$pastas[params[:key]] = params[:buffer]
 end
 
-get '/?' do
-	$buf
+get '/:key/?' do
+	$pastas[params[:key]]
 end
