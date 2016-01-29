@@ -1,9 +1,8 @@
 require 'sinatra'
-
-put '/:buf' do
-	$buf = params['buf']	
+post '/:buffer' do
+	$buf = params[:buffer]
 end
 
-get '/' do
+get '/?' do
 	$buf
 end
