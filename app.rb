@@ -1,6 +1,6 @@
 require 'sinatra'
 $pastas = {}
-post '/:key/:buffer' do
+put '/:key/:buffer' do
 	$pastas[params[:key]] = params[:buffer]
 end
 
